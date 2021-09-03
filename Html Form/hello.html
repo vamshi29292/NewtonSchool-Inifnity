@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form method="POST" action="action" >
+      <div>
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" placeholder="Enter first name"/>
+      </div>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" placeholder="Enter last name"/>
+      </div>
+      <div>
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" type="textarea" placeholder="Tell us about yourself"></textarea>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password"/>
+      </div>
+      <div>
+        <label for="confirmPassword">Confirm password</label>
+        <input id="confirmPassword" type="password" placeholder="Type password again"/>
+      </div>
+      <div>
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" />
+      </div>
+      <div>
+        <label>Gender</label>
+        <input id="male" name="gender" type="radio" value="Male" />
+        <label for="male">Male</label>
+        <input id="female" name="gender" type="radio" value="Female" />
+        <label for="female">Female</label>
+        <input id="thirdGender" name="gender" type="radio" value="ThirdGender" />
+        <label for="thirdGender">Third Gender</label>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Enter email" />
+      </div>
+      <div>
+        <label for="nationality">Nationality</label>
+        <select id="nationality" name="nationality">
+          <option value="India">India</option>
+          <option value="China">China</option>
+          <option value="Russia">Russia</option>
+          <option value="USA">USA</option>
+          <option value="Singapore">Singapore</option>
+        </select>
+      </div>
+      <div>
+        <label for="languages">languages</label>
+        <select id="languages" name="languages" multiple>
+          <option value="English">English</option>
+          <option value="Telugu">Telugu</option>
+          <option value="Hindi">Hindi</option>
+          <option value="Haryanvi">Haryanvi</option>
+          <option value="Urdu">Urdu</option>
+        </select>
+      </div>
+      <div>
+        <input type="submit" value="Sign up">
+      </div>
+    </form>
+    <script src="/script.js"></script>
+  </body>
+</html>
