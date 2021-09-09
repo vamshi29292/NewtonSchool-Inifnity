@@ -129,12 +129,7 @@
 
 // const squareNumber = a => a**2;
 
-// //Functions are values. Can be passed around like other value
-// //Functions passed to other functions are called callbacks
-// function applyFunction(fn, a, b) {
-//   //More code
-//   return fn(a,b);
-// }
+
 
 // console.log(subtractNumbers(16, 9));
 // console.log(applyFunction(addNumbers, 7, 8));
@@ -147,24 +142,53 @@
 //var declarations are function scoped.
 //If variable not available within the function scope it will be fetched from the nearest outer scope.
 var a = 6;
+var exponent = 3;
 
 function addNumbersAndSquare (c, d) {
   var exponent = 2;
-  console.log(a);
+  console.log(exponent);
   return (c + d) ** exponent;
 }
+
+console.log(exponent);
 
 //let and const declarations are block scoped.
 function doubleIfEven(a) {
   if (a % 2 == 0) {
-    var multiplier = 2;
+    let multiplier = 2;
     console.log(multiplier);
     return a * 2;
   }
-  console.log(multiplier);
+  // console.log(multiplier);
   return a;
 }
 
 // console.log(addNumbersAndSquare(4, 5));
 // console.log(a);
-console.log(doubleIfEven(5));
+console.log(addNumbersAndSquare(5, 6));
+
+
+//Higher order function.
+// Is a function that accepts another function as argument or returns another function
+// //Functions are values. Can be passed around like other value
+// //Functions passed to other functions are called callbacks
+function applyFunction(fn, a, b) {
+  //More code
+  return fn(a,b);
+}
+
+function getMultiplicator(x) {
+  return (
+    function(y) {
+      return x * y
+    }
+  )
+}
+
+const multiplyBy5 = getMultiplicator(5)
+const multiplyBy6 = getMultiplicator(6);
+
+console.log(multiplyBy5(4))
+console.log(multiplyBy6(4));
+
+//Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
